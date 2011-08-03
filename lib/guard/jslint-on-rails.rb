@@ -4,7 +4,7 @@ require 'guard/guard'
 puts 'loading'
 module Guard
   class JslintOnRails < Guard
-    VERSION = '0.0.1'
+    VERSION = '0.0.2'
 
     # def initialize(watchers = [], options = {})
     #   @process = nil
@@ -47,8 +47,9 @@ module Guard
     # end
 
     def run_on_change(paths)
-      puts paths.inspect
-      reload
+      puts "Running JSLint:"
+      result = system "rake jslint paths=#{paths.join(',')}"
+      raise 'JSLint Failure' unless result
     end
   end
 end
