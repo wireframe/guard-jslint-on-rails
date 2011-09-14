@@ -7,7 +7,7 @@ Guard plugin to verify that Javascript files comply with [JSLint](http://www.jsl
 Install
 -------
 
-Install and configure the [JSLint on Rails](https://github.com/psionides/jslint_on_rails) gem
+Install and configure the [JSLint on Rails](https://github.com/psionides/jslint_on_rails) gem.
 
 Install the gem:
 
@@ -29,7 +29,7 @@ Configuration
 ``` ruby
 # Guardfile
 guard 'jslint-on-rails' do
-  # watch for changes on any of your application javascript files
+  # watch for changes to application javascript files
   watch(%r{^app/assets/javascripts/.*\.js$})
   # watch for changes to the JSLint configuration
   watch('config/jslint.yml')
