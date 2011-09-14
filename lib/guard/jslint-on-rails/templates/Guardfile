@@ -1,0 +1,4 @@
+guard 'jslint-on-rails' do
+  watch(%r{^app/assets/javascripts/.*\.js$})
+  watch('config/jslint.yml')
+end
