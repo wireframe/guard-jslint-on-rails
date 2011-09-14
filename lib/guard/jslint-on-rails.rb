@@ -5,7 +5,7 @@ require 'jslint'
 
 module Guard
   class JslintOnRails < Guard
-    VERSION = '0.0.6'
+    VERSION = '0.0.7'
 
     def run_on_change(paths)
       error = nil
