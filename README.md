@@ -21,7 +21,7 @@ gem 'guard-jslint-on-rails'
 
 Add guard definition to your Guardfile by running this command:
 
-    $ guard init guard-jslint-on-rails
+    $ guard init jslint-on-rails
 
 Configuration
 -------------
