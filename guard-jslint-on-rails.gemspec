@@ -21,4 +21,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'guard', '>= 0.4.0'
   s.add_dependency 'jslint_on_rails', '>= 1.0.6'
+  s.add_development_dependency(%q<rake>, ['0.9.2.2'])
+
 end
