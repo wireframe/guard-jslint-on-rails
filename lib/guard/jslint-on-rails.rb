@@ -7,13 +7,22 @@ module Guard
   class JslintOnRails < Guard
     VERSION = '0.0.8'
 
+    def initialize(watchers=[], options={})
+      super
+      @config_path = File.join(Dir.pwd, options[:config_path] || 'config/jslint.yml')
+    end
+
+    def start
+      UI.info "Guard::JsLintOnRails started using config: #{@config_path}"
+    end
+
     def run_on_change(paths)
       error = nil
       begin
         output = capture_output do
           lint = ::JSLint::Lint.new(
             :paths => paths,
-            :config_path => File.join(Dir.pwd, 'config', 'jslint.yml')
+            :config_path => @config_path 
           )
           lint.run
         end
