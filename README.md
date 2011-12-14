@@ -36,4 +36,14 @@ guard 'jslint-on-rails' do
 end
 ```
 
+### Configuration Options
+
+```ruby
+# Guardfile
+guard 'jslint-on-rails', :config => '/path/to/jslint.yml' do
+end
+
+:config - path to jslint.yml config file. default is config/jslint.yml
+```
+
 Please read [Guard doc](https://github.com/guard/guard#readme) for more information about the Guardfile DSL.
