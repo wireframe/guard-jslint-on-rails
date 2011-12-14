@@ -36,7 +36,7 @@ guard 'jslint-on-rails' do
 end
 ```
 
-### Configuration Options
+### Optional Configuration Settings
 
 ```ruby
 # Guardfile
