@@ -47,3 +47,9 @@ end
 ```
 
 Please read [Guard doc](https://github.com/guard/guard#readme) for more information about the Guardfile DSL.
+
+## License
+
+This library is released under the MIT license:
+
+* http://www.opensource.org/licenses/MIT
