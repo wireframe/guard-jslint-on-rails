@@ -7,8 +7,6 @@ require 'yaml'
 module Guard
   class JslintOnRails < Guard
 
-    VERSION = '0.2.0'
-
     def initialize(watchers=[], options={})
       super
       @config_path = File.join(Dir.pwd, options[:config_path] || 'config/jslint.yml')

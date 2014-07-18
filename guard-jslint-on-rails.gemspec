@@ -1,10 +1,9 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "guard/jslint-on-rails"
 
 Gem::Specification.new do |s|
   s.name        = "guard-jslint-on-rails"
-  s.version     = Guard::JslintOnRails::VERSION
+  s.version     = '0.2.0'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Ryan Sonnek"]
   s.email       = ["ryan@codecrate.com"]
@@ -14,7 +13,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "guard-jslint-on-rails"
 
-  s.files         = `git ls-files`.split("\n")
+  s.files         = `git ls-files`.split("\n") - %w(.ruby-gemset .ruby-version .rvmrc)
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
