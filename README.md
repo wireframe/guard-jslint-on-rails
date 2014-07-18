@@ -40,10 +40,11 @@ end
 
 ```ruby
 # Guardfile
-guard 'jslint-on-rails', :config => '/path/to/jslint.yml' do
+guard 'jslint-on-rails', :config => '/path/to/jslint.yml', :all_on_start => true do
 end
 
 :config - path to jslint.yml config file. default is config/jslint.yml
+:all_on_start - option to run entire jslint suite (according to paths in your jslint config) when guard starts
 ```
 
 Please read [Guard doc](https://github.com/guard/guard#readme) for more information about the Guardfile DSL.
