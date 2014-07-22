@@ -1,3 +1,5 @@
+## NOTE: This gem has been deprecated and is superceded by the [guard-jshintrb gem](https://github.com/thegarage/guard-jshintrb)
+
 Guard::JslintOnRails 
 =============
 
