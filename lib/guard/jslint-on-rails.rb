@@ -1,15 +1,15 @@
-require 'guard'
-require 'guard/guard'
-require 'guard/notifier'
-require 'jslint'
+require "guard"
+require "guard/plugin"
+require "guard/notifier"
+require "jslint"
 
 module Guard
-  class JslintOnRails < Guard
-    VERSION = '0.2.0'
+  class JslintOnRails < Plugin
+    VERSION = "0.2.0"
 
-    def initialize(watchers=[], options={})
+    def initialize(options={})
       super
-      @config_path = File.join(Dir.pwd, options[:config_path] || 'config/jshint.yml')
+      @config_path = File.join(Dir.pwd, options[:config_path] || "config/jshint.yml")
     end
 
     def start
@@ -19,17 +19,17 @@ module Guard
     def run_on_change(paths)
       error = nil
       begin
-        output = capture_output do
+        capture_output do
           lint = ::JSLint::Lint.new(
             :paths => paths,
-            :config_path => @config_path 
+            :config_path => @config_path
           )
           lint.run
         end
       rescue ::JSLint::LintCheckFailure => e
         error = e
       end
-      Notifier.notify((error ? 'failed' : 'passed'), :title => 'JSLint results', :image => (error ? :failed : :success))
+      Notifier.notify((error ? "failed" : "passed"), :title => "JSLint results", :image => (error ? :failed : :success))
       true
     end
 
